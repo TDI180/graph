@@ -12,7 +12,8 @@
 							
 						}
 										   //object initialisation
-										   $db = new App\Database ('blog','','','');
+										   //$db = new App\Database ('blog','','','');
+										   //App::getDb();
 										   
 											ob_start ();
 																if ($p=== 'homeland') 
