@@ -1,6 +1,8 @@
 <?php
 namespace App\Table;
 
+use App\App;
+
 class article {
 	           
 				/*TEST DE LA BRANCHE */
@@ -16,6 +18,13 @@ class article {
 				/*
 				   __set() est sollicitée lors de l'écriture de données vers des propriétés inaccessibles (protégées ou privées) ou non existante. 
 				*/ 
+				
+				
+				 public static function getLast() {
+
+													return App::getDb()->query ('SELECT * FROM articles',__CLASS__);
+												   } 				
+				
 				 
 				 public function __get($key) //methode magik a revoir
 				 
