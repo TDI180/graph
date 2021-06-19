@@ -1,20 +1,24 @@
 
  <h2> i am on the HOME-PAGE 
 
- <p>
- <a>-----ZEBI-kbir bezef</a>
- 
- </p>
+						   <p>
+						 
+							 <a>-----ZEBI-kbir bezef</a>
+						 
+						   </p>
  
     <ul>
 
 		    <?php	
-				$tabdata=$db->query('SELECT * FROM articles','App\Table\article');
+				//$tabdata=$db->query('SELECT * FROM articles','App\Table\article');
 				//var_dump ($tabdata[0]);
-				echo $tabdata[0]->id;
+				//echo $tabdata[0]->id;
 				
 				
-				foreach ($db->query('SELECT * FROM articles','App\Table\article') as $post):
+				//foreach ($db->query('SELECT * FROM articles','App\Table\article') as $post):
+				
+				foreach (\App\Table\article::getLast() as $post):
+				
 				//var_dump ($post);
 		    ?>
 				
