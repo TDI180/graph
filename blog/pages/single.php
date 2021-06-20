@@ -19,9 +19,9 @@
 			$post = $db->prepare ('SELECT * FROM articles WHERE id=?', [$_GET['id']],'App\Table\Article',true);
 	?>
 	
-	<p><?= $post->titre; ?></p>
+	<p><?= $post->titre;?></p>
 	
-	<p><?= $post->contenu; ?></p>
+	<p><?= $post->contenu;?></p>
 	
 	
 			
