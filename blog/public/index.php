@@ -1,6 +1,7 @@
 <?php
 					require  '../app/Autoloader.php';
 					App\Autoloader::register(); //  call classes
+					
 
 					if (isset($_GET['p'])) 
 					{
