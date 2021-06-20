@@ -3,6 +3,11 @@ namespace App\Table;
 
 use App\App;
 
+use zebi\zebi;
+
+$foo= new zebi();
+$foo->choufZEBI();
+
 class article {
 	           
 				/*TEST DE LA BRANCHE */
