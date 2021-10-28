@@ -6,7 +6,7 @@ use App\App;
 use zebi\zebi;
 
 $foo= new zebi();
-$foo->choufZEBI();
+//$foo->choufZEBI();
 
 class article {
 	           
@@ -26,15 +26,16 @@ class article {
 				
 				
 				 public static function getLast() {
-
-													return App::getDb()->query ('SELECT * FROM articles',__CLASS__);
-												   } 				
+													 return App::getDb()->query ("
+													 SELECT articles.id,articles.titre,articles.contenu,categories.titre as categorie
+													 FROM articles LEFT JOIN categories ON category_id = categories.id ",__CLASS__); 
+											      } 				
 				
 				 
 				 public function __get($key) //methode magik a revoir
 				 
 				   {
-					var_dump ($key);
+					//var_dump ($key);
 					
 					$method = 'get'.ucfirst($key);	
 				    //echo '-------------------';
@@ -75,4 +76,3 @@ class article {
 
 ?>
 
-//samedi 27 mars 2021

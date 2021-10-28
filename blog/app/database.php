@@ -8,8 +8,7 @@
 							private $db_name;
 							private $db_user;
 							private $db_pass;
-							private $db_host;
-								
+							private $db_host;								
 		
 		                    public function __construct ( $db_name,$db_user='root',$db_pass='',$db_host='localhost') 
 																{
@@ -23,17 +22,19 @@
 							{
 								//l objet PDO SE TROUVE à la racine ...à preciser sinon error au niveau de l instanciation.
 			                        // statement = requete sql= 'mysql:dbname=articles;host=localhost','root',' '
-			                       // die(var_dump (PDO::ATTR_ERRMODE));			                   
+			                       // die(var_dump (PDO::ATTR_ERRMODE));	
+									//var_dump ($this->pdo) ;	
+									//echo ('zebi----');
 								
 								  if ( $this->pdo === null) // cette condition "if" permet d initier une seule & unik connexion à la data-base ---> diminue l allocation de memoire
 								  {								 																																// pas de fuite de memoire
 									 $pdo=new \PDO ( 'mysql:dbname=blog;host=localhost','root',''); //l objet PDO SE TROUVE à la racine ...à preciser sinon error au niveau de l instanciation.
 									 $pdo->setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 									 $this->pdo = $pdo;
-									 var_dump ( 'getPDO initiALISATION') ; // CHECK IF CONNEXION IS UNIQUE.
+									 
 								  }
 							  
-							     var_dump ( 'getPDO called') ; // CHECK IF CONNEXION IS UNIQUE
+							     //var_dump ( $this->pdo) ; // CHECK IF CONNEXION IS UNIQUE
 							  return   $this->pdo;			
 			                  }
 			                    

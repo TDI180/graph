@@ -2,6 +2,7 @@
 					require  '../app/Autoloader.php';
 					App\Autoloader::register(); //  call classes
 					
+					
 
 					if (isset($_GET['p'])) 
 					{
@@ -13,8 +14,8 @@
 							
 						}
 										   //object initialisation
-										   //$db = new App\Database ('blog','','','');
-										   //App::getDb();
+										   $db = new App\Database ('blog','','','');
+										   App\App::getDb();
 										   
 											ob_start ();
 																if ($p=== 'homeland') 

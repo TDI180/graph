@@ -10,17 +10,19 @@
     <ul>
 
 		    <?php	
-				//$tabdata=$db->query('SELECT * FROM articles','App\Table\article');
-				//var_dump ($tabdata[0]);
-				//echo $tabdata[0]->id;
-				
+				 //$tabdata=$db->query('SELECT * FROM articles','App\Table\article');
+				 //var_dump ($tabdata[0]);
+				 //echo $tabdata[0]->id;				
 				
 				//foreach ($db->query('SELECT * FROM articles','App\Table\article') as $post):
 				
 				foreach (\App\Table\article::getLast() as $post):
+			
 				
-				//var_dump ($post);
-		    ?>
+				var_dump ($post);
+
+			?>
+		    
 				
 				<h2> <a href="<?php echo $post->url ?>"> <?= $post->titre; ?> </a></h2>
 				<p>
