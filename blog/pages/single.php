@@ -9,7 +9,7 @@
 			  
 			$tabdata=$db->query('SELECT * FROM articles','App\Table\article');
 			
-			//echo  $tabdata[$_GET['id']]->contenu;
+			//----------------echo  $tabdata[$_GET['id']]->contenu;
 			//echo $tabdata[$_GET['id']]-> getExtrait_full(); the first index array = 0--d ou le décalage du contenu
 			//echo $tabdata[0]-> getExtrait_full();
 			
