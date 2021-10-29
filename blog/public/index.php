@@ -2,7 +2,7 @@
 					require  '../app/Autoloader.php';
 					App\Autoloader::register(); //  call classes
 					/* TEST KEY SSH COMMAND GIT PUSH MUST ASK FOR THE PASSWORD 
-                        TEST HTTPS
+                       TEST HTTPS -----------> GIT PUSH
 
 					*/
 					
